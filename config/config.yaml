@@ -141,6 +141,34 @@ rss:
       name: "雅虎财经"
       url: "https://finance.yahoo.com/news/rssindex"
 
+    - id: "openai-news"
+      name: "OpenAI News"
+      url: "https://openai.com/news/rss.xml"
+
+    - id: "google-ai-blog"
+      name: "Google AI Blog"
+      url: "https://blog.google/technology/ai/rss/"
+
+    - id: "anthropic-news"
+      name: "Anthropic News"
+      url: "https://www.anthropic.com/news/rss.xml"
+
+    - id: "nvidia-blog"
+      name: "NVIDIA Blog"
+      url: "https://blogs.nvidia.com/feed/"
+
+    - id: "techcrunch"
+      name: "TechCrunch"
+      url: "https://techcrunch.com/feed/"
+
+    - id: "the-verge"
+      name: "The Verge"
+      url: "https://www.theverge.com/rss/index.xml"
+
+    - id: "bbc-world"
+      name: "BBC World"
+      url: "https://feeds.bbci.co.uk/news/world/rss.xml"
+
     # 自定义源示例
     # - id: "custom-feed"
     #   name: "自定义源"
