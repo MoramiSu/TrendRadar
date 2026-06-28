@@ -149,9 +149,7 @@ rss:
       name: "Google AI Blog"
       url: "https://blog.google/technology/ai/rss/"
 
-    - id: "anthropic-news"
-      name: "Anthropic News"
-      url: "https://www.anthropic.com/news/rss.xml"
+    - id: "anthropic-news"`n      name: "Anthropic News"`n      url: "https://www.anthropic.com/news/rss.xml"`n      enabled: false                  # RSS 地址当前返回 404，暂时禁用
 
     - id: "nvidia-blog"
       name: "NVIDIA Blog"
