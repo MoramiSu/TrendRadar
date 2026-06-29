@@ -8,16 +8,16 @@
 
 [科技]
 /科技|技术突破|前沿科技|互联网|软件|硬件|云计算|数据中心|芯片|半导体|光刻机|算力|量子|机器人|自动驾驶|新能源|核能|航天|卫星|technology|tech|software|hardware|cloud|data center|semiconductor|chip|lithography|compute|quantum|robotics|autonomous driving|EV|nuclear|space|satellite/i
-@30
+@10
 
 [国内外政治]
 /政治|政策|外交|地缘|选举|总统|总理|国会|议会|白宫|国务院|欧盟|联合国|北约|制裁|关税|中美|俄乌|中东|台海|南海|politics|policy|diplomacy|geopolitics|election|president|prime minister|congress|parliament|White House|State Department|EU|European Union|UN|NATO|sanction|tariff|China|US|Russia|Ukraine|Middle East|Taiwan|South China Sea/i
-@30
+@10
 
 [AI]
 /(?<![a-zA-Z])ai(?![a-zA-Z])|人工智能|大模型|模型训练|推理|智能体|多模态|生成式|机器人|具身智能|OpenAI|ChatGPT|Sora|Anthropic|Claude|Gemini|DeepMind|DeepSeek|Qwen|Llama|Mistral|NVIDIA|GPU|agent|agents|LLM|large language model|generative AI|multimodal|inference|training|foundation model|embodied AI/i
-@30
+@10
 
 [金融财经]
 /金融|财经|经济|股市|美股|A股|港股|债券|汇率|美元|人民币|黄金|原油|油价|通胀|降息|加息|央行|美联储|财政|财报|并购|IPO|比特币|加密货币|finance|financial|economy|market|stock|equity|bond|yield|forex|dollar|yuan|gold|oil|crude|inflation|rate cut|rate hike|central bank|Federal Reserve|Fed|earnings|merger|acquisition|IPO|Bitcoin|crypto/i
-@30
+@10
