@@ -20,6 +20,8 @@ from trendradar.utils.time import (
 class AIFilterPipeline:
     """AI 筛选流水线，编排标签提取、批量分类、结果存储的完整流程"""
 
+    RSS_SUMMARY_MAX_CHARS = 500
+
     def __init__(
         self,
         config: Dict[str, Any],
@@ -350,7 +352,12 @@ class AIFilterPipeline:
                 time.sleep(batch_interval)
             batch = pending_rss[i:i + batch_size]
             titles_for_ai = [
-                {"id": n["id"], "title": n["title"], "source": n.get("source_name", "")}
+                {
+                    "id": n["id"],
+                    "title": n["title"],
+                    "source": n.get("source_name", ""),
+                    "summary": self._truncate_rss_summary(n.get("summary", "")),
+                }
                 for n in batch
             ]
             batch_results = ai_filter.classify_batch(titles_for_ai, active_tags, interests_content)
@@ -365,6 +372,15 @@ class AIFilterPipeline:
             print(f"[AI筛选] RSS 批次 {i // batch_size + 1}: {len(batch)} 条 → {len(batch_results)} 条匹配")
 
         return total_results, succeeded_news_ids, succeeded_rss_ids
+
+    def _truncate_rss_summary(self, summary: str) -> str:
+        """限制 RSS 摘要长度，避免 AI 筛选 prompt 过长。"""
+        summary = (summary or "").strip()
+        if not summary:
+            return ""
+        if len(summary) <= self.RSS_SUMMARY_MAX_CHARS:
+            return summary
+        return summary[:self.RSS_SUMMARY_MAX_CHARS].rstrip() + "..."
 
     def _save_results(self, total_results, succeeded_news_ids, succeeded_rss_ids, effective_interests_file, current_hash):
         if total_results:
