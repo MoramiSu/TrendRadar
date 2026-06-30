@@ -317,7 +317,7 @@ class AIFilter:
         阶段 B：对一批新闻标题做分类
 
         Args:
-            titles: [{"id": news_item_id, "title": str, "source": str}]
+            titles: [{"id": news_item_id, "title": str, "source": str, "summary": str}]
             tags: [{"id": tag_id, "tag": str, "description": str}]
             interests_content: 用户的兴趣描述（含质量过滤要求）
 
@@ -338,11 +338,15 @@ class AIFilter:
             for t in tags
         )
 
-        # 构建新闻列表文本
-        news_list = "\n".join(
-            f"{t['id']}. [{t.get('source', '')}] {t['title']}"
-            for t in titles
-        )
+        # 构建新闻列表文本。RSS 条目可能带有摘要，供 AI 在标题过短时参考。
+        news_lines = []
+        for t in titles:
+            line = f"{t['id']}. [{t.get('source', '')}] {t['title']}"
+            summary = (t.get("summary") or "").strip()
+            if summary:
+                line += f"\n   摘要: {summary}"
+            news_lines.append(line)
+        news_list = "\n".join(news_lines)
 
         # 填充模板
         user_prompt = self.classify_user
