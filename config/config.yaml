@@ -118,7 +118,7 @@ rss:
   freshness_filter:
     enabled: true                     # 是否启用新鲜度过滤（true=启用, false=关闭）
 
-    max_age_days: 1                   # 最大文章年龄（天）
+    max_age_days: 2                   # 最大文章年龄（天）
                                       # - 正整数：只推送 N 天内的文章
                                       # - 0：禁用过滤，推送所有文章
 
@@ -182,7 +182,7 @@ rss:
 # 4. 报告模式
 # ===============================================================
 report:
-  mode: "current"                     # 报告模式（开启 schedule 后作为默认值，会被 timeline 时段覆盖）
+  mode: "daily"                     # 报告模式（开启 schedule 后作为默认值，会被 timeline 时段覆盖）
                                       # daily = 当日汇总，按时推送当天所有匹配新闻（会包含之前推过的）
                                       # current = 当前榜单，按时推送当前在榜的匹配新闻（持续在榜的每次都出现）
                                       # incremental = 增量监控，只推送新增内容，零重复（没有新增时不推送）
@@ -197,7 +197,7 @@ report:
 
   rank_threshold: 5                   # 排名高亮阈值（影响展示强调，不改变抓取范围）
 
-  max_news_per_keyword: 0             # 每个关键词/标签最大显示数量（0=不限制，仅影响展示裁剪）
+  max_news_per_keyword: 5             # 每个关键词/标签最大显示数量（0=不限制，仅影响展示裁剪）
 
 
 # ===============================================================
@@ -222,14 +222,14 @@ ai_filter:
   batch_size: 150                         # 每批发送给 AI 的标题数，超过此数量自动分批
   batch_interval: 2                       # 分批间隔（秒），避免触发 API 限流，0=不等待
 
-  min_score: 0.78                          # 推送最低分数阈值（0.0~1.0），值越高越严格
+  min_score: 0.65                          # 推送最低分数阈值（0.0~1.0），值越高越严格
                                           # 推荐 0.5~0.7 起步，0=不过滤
 
   # 兴趣描述文件（默认 config/ai_interests.txt，无需配置）
   # 自定义文件放入 config/custom/ai/ 目录，然后指定文件名：
   # interests_file: "finance.txt"    # → 加载 config/custom/ai/finance.txt
 
-  reclassify_threshold: 0.6              # 全量重分类触发阈值（0~1）
+  reclassify_threshold: 0.0              # 全量重分类触发阈值（0~1）
                                           # 越低越倾向全量重分类（更准但更耗 token）
                                           # 越高越倾向增量更新（更省但可能不够新）
 
@@ -449,7 +449,7 @@ ai_analysis:
                                     # follow_report = 跟随 report.mode（默认）
                                     # daily / current / incremental = 强制使用指定模式
 
-  max_news_for_analysis: 80        # 参与分析的新闻数量上限（控制 token 成本的关键项）
+  max_news_for_analysis: 120        # 参与分析的新闻数量上限（控制 token 成本的关键项）
                                     # 热榜优先占用配额，RSS 用剩余配额，独立展示区不受此限制
 
   include_rss: true                # 是否包含 RSS 内容进行分析（true=包含, false=不包含）
