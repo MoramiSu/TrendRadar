@@ -1,14 +1,18 @@
 # TrendRadar AI interest profile
 # User goal: maintain broad information sensitivity with a concise, high-signal daily brief.
 
-我的目标是保持对重要信息的敏感度，而不是做交易决策、追踪娱乐热点或收集普通产品发布。请优先保留有趋势意义、技术/商业/政策/市场影响、可能改变预期或反映结构性变化的新闻。日报要少而精。
+我的目标是保持对重要信息的敏感度，而不是做交易决策、追踪娱乐热点或收集普通产品发布。我是一名 LLM 算法工程师，在字节跳动工作；请优先保留对 LLM 研发、模型能力、Agent 产品化、AI 工程化、行业竞争和宏观风险有启发的信息。不要推断或涉及任何公司内部、非公开或敏感信息；只基于公开新闻判断。日报要少而精。
 
 1. AI 模型能力突破与 AI Agent（最高优先级）
-- 最关注模型能力边界变化：推理能力、工具调用、长上下文、多模态、代码能力、视频/语音生成、记忆、可靠性、评测结果、开源/闭源策略变化。
-- 重点关注 AI Agent：自主任务执行、浏览器/电脑操作、工作流自动化、多 Agent 协作、企业落地、开发者工具、Agent 平台和实际产品化案例。
-- 重点实体包括 OpenAI、ChatGPT、Sora、Anthropic、Claude、Google DeepMind、Gemini、DeepSeek、Qwen、Llama、Mistral、Meta AI、Microsoft Copilot、Cursor、Perplexity 等。
+- 最关注模型能力边界变化：推理能力、工具调用、长上下文、多模态、代码能力、视频/语音生成、记忆、可靠性、评测结果、训练/后训练方法、数据合成、对齐、评估、开源/闭源策略变化。
+- 重点关注 AI Agent：自主任务执行、浏览器/电脑操作、工作流自动化、多 Agent 协作、企业落地、开发者工具、Agent 平台、上下文工程、工具生态和实际产品化案例。
+- 重点实体包括 OpenAI、ChatGPT、Sora、Anthropic、Claude、Google DeepMind、Gemini、DeepSeek、Qwen、Llama、Mistral、Meta AI、Microsoft Copilot、Cursor、Perplexity、ByteDance、豆包、火山引擎、Seed、扣子/Coze 等公开信息。
 - 对“普通产品小更新”“营销式发布”“换皮 AI 应用”“没有明确能力突破的功能宣传”降低优先级。
 - 推理成本、芯片、底层算力不是重点，除非它们直接影响模型能力、Agent 落地或产业格局。
+
+补充偏好：
+- LLM 算法工程师视角：优先保留能启发研发判断的内容，例如新 benchmark、模型架构/训练范式、post-training、RL、数据策略、评估方法、推理优化、Agent 框架、开发者工具和真实产品反馈。
+- 对字节跳动/豆包/火山引擎/Seed/Coze 等公开新闻提高关注，但只处理公开信息，不做内部联想。
 
 2. 科技与产业趋势
 - 关注会影响未来 1-3 年产业方向的科技变化：AI 应用生态、软件工程工具、机器人应用、自动化、平台竞争、开发者生态、云服务变化、重要监管与标准。
