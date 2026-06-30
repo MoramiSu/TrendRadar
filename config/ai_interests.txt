@@ -15,6 +15,7 @@
 
 RSS/英文源召回偏好：
 - RSS 源通常来自 Hacker News、OpenAI News、Google AI Blog、NVIDIA Blog、TechCrunch、The Verge、BBC World、Yahoo Finance 等英文信息源；不要因为标题是英文、表达简短、没有中文关键词就过滤掉。
+- RSS 条目如果提供摘要，请主要参考摘要判断信息价值；标题只作为索引线索，避免误杀英文短标题。
 - 对英文 RSS 中涉及模型能力、AI Agent、开发者工具、AI 产品化、科技公司战略、宏观市场、地缘政策的内容，适度提高召回。当天如果确实有高质量 RSS，尽量保留 3-8 条；如果都是低质量或不相关，也可以不保留。
 - 对 Hacker News/TechCrunch/The Verge 这类源，优先保留能反映技术趋势、开发者生态、产品化变化或行业竞争的文章；普通融资、消费硬件小更新、营销稿仍然跳过。
 
